@@ -31,57 +31,36 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var names = [
+      'Manish',
+      'Sanjay',
+      'Gopi',
+      'Kanchan',
+      'Muskan',
+      'Ameet',
+      'Pooja',
+      'Shankar'
+    ];
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
       // ignore: prefer_const_constructors
       body: Center(
-        child: ListView(
-          children: const [
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'One',
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Two',
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Three',
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Four',
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Five',
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Six',
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-              ),
-            ),
-          ],
+        //ListView.builder method is used define list view in dynamic manner. as below we can say that names array is printed and with the help of index we access each name from array.
+
+        child: ListView.builder(
+          itemBuilder: (context, index) {
+            return Text(
+              names[index],
+              style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+            );
+          },
+          itemCount: names.length,
+          // the scroll direction is used for axis and item Extent is used for spacing in items
+          // scrollDirection: Axis.horizontal,
+          itemExtent: 100,
         ),
       ),
     );
