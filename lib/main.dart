@@ -32,97 +32,58 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-        ),
-        // ignore: prefer_const_constructors
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(11.0),
-            child: Column(
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.yellow,
-                      ),
-                      Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.blue,
-                      ),
-                      Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.green,
-                      ),
-                      Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.red,
-                      ),
-                      Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.yellow,
-                      ),
-                      Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.blue,
-                      ),
-                      Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.green,
-                      ),
-                      Container(
-                        height: 200,
-                        width: 200,
-                        color: Colors.red,
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.yellow,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.blue,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.green,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.red,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.yellow,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.blue,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.green,
-                ),
-                Container(
-                  height: 200,
-                  color: Colors.red,
-                )
-              ],
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      // ignore: prefer_const_constructors
+      body: Center(
+        child: ListView(
+          children: const [
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'One',
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+              ),
             ),
-          ),
-        ));
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'Two',
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'Three',
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'Four',
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'Five',
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'Six',
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
