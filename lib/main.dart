@@ -48,9 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       // ignore: prefer_const_constructors
       body: Center(
-        //ListView.builder method is used define list view in dynamic manner. as below we can say that names array is printed and with the help of index we access each name from array.
+        //ListView.seprated method is used define list view in dynamic manner as listview.builder. but the changes are here we need to use seprator widget to seprate each line.
 
-        child: ListView.builder(
+        child: ListView.separated(
           itemBuilder: (context, index) {
             return Text(
               names[index],
@@ -58,9 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
             );
           },
           itemCount: names.length,
-          // the scroll direction is used for axis and item Extent is used for spacing in items
           // scrollDirection: Axis.horizontal,
-          itemExtent: 100,
+          separatorBuilder: (context, index) {
+            // we use Divider widget and add height and thickness for the line.
+            return const Divider(
+              height: 10,
+              thickness: 4,
+            );
+          },
         ),
       ),
     );
